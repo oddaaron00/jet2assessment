@@ -1,8 +1,7 @@
 <template>
   <div class="app">
-    <h1>HI</h1>
-    <button @click="flipModalState">Click to launch modal</button>
-    <h2>HIII</h2>
+    <button @click="flipModalState">Click to fire modal</button>
+    <br>
     <Modal :flipModalState="flipModalState"/>
   </div>
 </template>
@@ -26,7 +25,7 @@
 
 <style lang="scss">
   body {
-    background-color: gray;
+    background-color: #636f79;
     margin: 0;
   }
 </style>
