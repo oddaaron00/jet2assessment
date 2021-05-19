@@ -1,16 +1,14 @@
 <template>
   <div class="app">
     <h1>HI</h1>
-    <button @click="modal = !modal">Click to launch modal</button>
+    <button @click="flipModalState">Click to launch modal</button>
     <h2>HIII</h2>
-    <Modal v-show="modal"/>
+    <Modal :flipModalState="flipModalState"/>
   </div>
 </template>
 
 <script>
 import Modal from "./components/Modal.vue";
-
-const greet = () => alert("HI");
 
 export default {
   name: "App",
@@ -18,13 +16,11 @@ export default {
     Modal,
   },
   methods: {
-    greet,
-  },
-  data() {
-    return {
-      modal: false,
-    };
-  },
+    flipModalState() {
+      let x = document.getElementById("modalBookingComplete").style.display;
+      document.getElementById("modalBookingComplete").style.display = x ? "" : "inline";
+    }
+  }
 };
 </script>
 

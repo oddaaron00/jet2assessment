@@ -1,5 +1,5 @@
 <template>
-  <div class="modal">
+  <div class="modal" id="modalBookingComplete">
     <div class="modal__container modal__container--main">
       <header class="modal__header">
           <font-awesome-icon class="modal__img modal__img--icon" icon="check-circle"/>
@@ -12,8 +12,8 @@
       </main>
       <hr class="hr">
       <footer class="modal__footer">
-        <button class="modal__button modal__button--cancel">Cancel</button>
-        <button class="modal__button modal__button--continue">Continue</button>
+        <button @click="flipModalState" class="modal__button modal__button--cancel">Cancel</button>
+        <button @click="flipModalState" class="modal__button modal__button--continue">Continue</button>
       </footer>
     </div>
   </div>
@@ -22,6 +22,9 @@
 <script>
 export default {
   name: "Modal",
+  props: {
+    flipModalState: Function
+  }
 };
 </script>
 
@@ -103,6 +106,7 @@ export default {
 */
 
 .modal {
+  display: none;
   background-color: #f2f2f2;
   position: fixed;
   bottom: 0;
