@@ -1,19 +1,19 @@
 <template>
   <div class="modal">
-    <div class="main-container">
-      <header class="header">
-          <font-awesome-icon class="img" icon="check-circle"/>
-          <h1 class="heading">
+    <div class="modal__container modal__container--main">
+      <header class="modal__header">
+          <font-awesome-icon class="modal__img modal__img--icon" icon="check-circle"/>
+          <h1 class="modal__text modal__text--heading">
             Congratulations! Your Jet2 holiday booking has been confirmed.
           </h1>
       </header>
-      <main class="body">
-        <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore, dignissimos quasi fuga sunt, nihil nemo labore? Molastiae, eum, eos! Illum non laborum asperiores, mollitia minima quasi atque. Eligendi, atque.</p>
+      <main class="modal__body">
+        <p class="modal__text modal__text--body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore, dignissimos quasi fuga sunt, nihil nemo labore? Molastiae, eum, eos! Illum non laborum asperiores, mollitia minima quasi atque. Eligendi, atque.</p>
       </main>
       <hr class="hr">
-      <footer class="footer">
-        <button class="cancel-button">Cancel</button>
-        <button class="continue-button">Continue</button>
+      <footer class="modal__footer">
+        <button class="modal__button modal__button--cancel">Cancel</button>
+        <button class="modal__button modal__button--continue">Continue</button>
       </footer>
     </div>
   </div>
@@ -28,13 +28,14 @@ export default {
 <style lang="scss">
 @use "../assets/globals";
 
+/*
 .modal {
   background-color: #f2f2f2;
   position: fixed;
   bottom: 0;
   width: 100%;
 
-  .main-container {
+  .modal__container--main {
     margin: auto;
     width: 88%;
   }
@@ -42,38 +43,38 @@ export default {
   .hr {
   }
 
-  .header {
+  .modal__header {
     padding-top: 14px;
     display: flex;
     flex-direction: row;
 
-    .img {
+    .modal__img--icon {
       color: #098c09;
       font-size: 3.5vh;
       padding-right: 12px;
       padding-top: 9px;
     }
 
-    .heading {
+    .modal__text--heading {
       font-family: globals.$font-stack;
       font-size: 3.3vh;
     }
 
   }
 
-  .body {
-      .body-text {
+  .modal__body {
+      .modal__text--body {
         padding-bottom: 12px;
         font-family: globals.$font-stack;
         font-size: 2.5vh;
       }
     }
 
-    .footer {
+    .modal__footer {
       display: flex;
       flex-direction: column;
 
-      .cancel-button {
+      .modal__button--cancel {
         border: 3px solid globals.$secondary-color;
         border-radius: 5px;
         width: 100%;
@@ -85,7 +86,7 @@ export default {
         margin: 2px auto;
       }
 
-      .continue-button {
+      .modal__button--continue {
         background-color: globals.$primary-color;
         border-radius: 5px;
         width: 100%;
@@ -98,5 +99,78 @@ export default {
         margin-bottom: 9px;
       }
     }
+}
+*/
+
+.modal {
+  background-color: #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &__container {
+    &--main {
+      margin: auto;
+      width: 88%;
+    }
+  }
+
+  .hr {
+  }
+
+  &__header {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__img {
+    &--icon {
+      color: #098c09;
+      font-size: 3.5vh;
+      padding-right: 12px;
+      padding-top: 9px;
+    }
+  }
+
+  &__text {
+    font-family: globals.$font-stack;
+
+    &--heading {
+      font-size: 3.3vh;
+    }
+
+    &--body {
+      padding-bottom: 12px;
+      font-size: 2.5vh;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+      border-radius: 5px;
+      width: 100%;
+      font-size: 2.56vh;
+      font-weight: bolder;
+      font-style: italic;
+      height: 45px;
+
+    &--cancel {
+      border: 3px solid globals.$secondary-color;
+      color: globals.$secondary-color;
+      margin: 2px auto;
+    }
+
+    &--continue {
+      background-color: globals.$primary-color;
+      color: #f2f2f2;
+      margin: 2px auto;
+      margin-bottom: 9px;
+    }
+  }
 }
 </style>
