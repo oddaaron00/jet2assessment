@@ -158,7 +158,7 @@
     &__button {
         border-radius: 5px;
         width: 100%;
-        font-size: 2.56vh;
+        font-size: 16px;
         font-weight: bolder;
         font-style: italic;
         height: 45px;
@@ -177,4 +177,70 @@
       }
     }
   }
+
+/*  @media screen and (min-width: 641px) {
+    .modal {
+      width: 80%;
+      margin: 0 auto;
+
+      &__container {
+        &--main {
+          margin: auto;
+          width: 88%;
+        }
+      }
+
+      .hr {
+      }
+
+      &__header {
+        padding-top: 14px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      &__img {
+        &--icon {
+          font-size: 3.5vh;
+          padding-right: 12px;
+          padding-top: 9px;
+        }
+      }
+
+      &__text {
+
+        &--heading {
+          font-size: 3.3vh;
+        }
+
+        &--body {
+          padding-bottom: 12px;
+          font-size: 2.5vh;
+        }
+      }
+
+      &__footer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__button {
+          border-radius: 5px;
+          width: 100%;
+          font-size: 2.56vh;
+          font-weight: bolder;
+          font-style: italic;
+          height: 45px;
+
+        &--cancel {
+          margin: 2px auto;
+        }
+
+        &--continue {
+          margin: 2px auto;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }*/
 </style>
