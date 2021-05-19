@@ -10,6 +10,7 @@
       <main class="body">
         <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore, dignissimos quasi fuga sunt, nihil nemo labore? Molastiae, eum, eos! Illum non laborum asperiores, mollitia minima quasi atque. Eligendi, atque.</p>
       </main>
+      <hr class="hr">
       <footer class="footer">
         <button class="cancel-button">Cancel</button>
         <button class="continue-button">Continue</button>
@@ -38,6 +39,9 @@ export default {
     width: 88%;
   }
 
+  .hr {
+  }
+
   .header {
     padding-top: 14px;
     display: flex;
@@ -59,6 +63,7 @@ export default {
 
   .body {
       .body-text {
+        padding-bottom: 12px;
         font-family: globals.$font-stack;
         font-size: 2.5vh;
       }
@@ -77,7 +82,7 @@ export default {
         font-size: 2.56vh;
         font-weight: bolder;
         font-style: italic;
-        margin: 1px auto;
+        margin: 2px auto;
       }
 
       .continue-button {
@@ -86,7 +91,7 @@ export default {
         width: 100%;
         height: 45px;
         color: #f2f2f2;
-        margin: 1px auto;
+        margin: 2px auto;
         font-size: 2.56vh;
         font-weight: bolder;
         font-style: italic;
