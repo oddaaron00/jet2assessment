@@ -3,7 +3,7 @@
     <div id="dimmer" class=""></div>
     <button @click="fireModal">Click to fire modal</button>
     <br>
-    <modal v-for="modal in modals" :key="modal" :closeModal="closeModal"/>
+    <modal v-for="(modal, i) in modals" :key="i" :closeModal="closeModal"/>
   </div>
 </template>
 
