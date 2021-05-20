@@ -16,14 +16,26 @@
     },
     methods: {
       flipModalState() {
-        let x = document.getElementById("modalBookingComplete").style.display;
-        document.getElementById("modalBookingComplete").style.display = x ? "" : "inline";
+        let y = document.getElementById("modal--booking-complete").style.display;
+        document.getElementById("modal--booking-complete").style.display = y ? "" : "inline";
       }
     }
   };
 </script>
 
 <style lang="scss">
+  #dimmer
+  {
+      background:#000;
+      opacity:0.5;
+      position:fixed; /* important to use fixed, not absolute */
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:9999; /* may not be necessary */
+  }
+
   body {
     background-color: #636f79;
     margin: 0;
