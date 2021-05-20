@@ -32,6 +32,7 @@
   @use "../assets/globals";
 
   .modal {
+    z-index: 100000;
     display: none;
     background-color: #f2f2f2;
     position: fixed;
@@ -45,8 +46,7 @@
       }
     }
 
-    .hr {
-    }
+    // .hr {}
 
     &__header {
       padding-top: 14px;
@@ -117,13 +117,9 @@
       transform: translate(-50%, -50%);
 
 
-      &__container {
-        &--main {
-        }
-      }
+      // &__container { &--main {} }
 
-      .hr {
-      }
+      // .hr {}
 
       &__header {
         padding: 0px 30px;
@@ -133,8 +129,7 @@
       &__img {
         padding-top: 12px;
         padding-right: 20px;
-        &--icon {
-        }
+        // &--icon {}
       }
 
       &__text {
@@ -161,11 +156,9 @@
         margin-left: 2px;
         margin-right: 2px;
 
-        &--cancel {
-        }
+        // &--cancel {}
 
-        &--continue {
-        }
+        // &--continue {}
       }
     }
   }
