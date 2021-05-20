@@ -12,8 +12,8 @@
       </main>
       <hr class="hr">
       <footer class="modal__footer">
-        <button @click="flipModalState" class="modal__button modal__button--cancel">Cancel</button>
-        <button @click="flipModalState" class="modal__button modal__button--continue">Continue</button>
+        <button @click="closeModal" class="modal__button modal__button--cancel">Cancel</button>
+        <button @click="closeModal" class="modal__button modal__button--continue">Continue</button>
       </footer>
     </div>
   </div>
@@ -23,7 +23,7 @@
   export default {
     name: "Modal",
     props: {
-      flipModalState: Function
+      closeModal: Function
     }
   };
 </script>
@@ -33,7 +33,7 @@
 
   .modal {
     z-index: 100000;
-    display: none;
+    display: inline;
     background-color: #f2f2f2;
     position: fixed;
     bottom: 0;
