@@ -18,8 +18,7 @@
     methods: {
       flipModalState() {
         const x = document.getElementById("dimmer").className;
-        if (x.includes("dimmed")) {
-          console.log(document.getElementById("dimmer").className);
+        if (x.indexOf("dimmed") !== -1) {
           document.getElementById("dimmer").className = x.replace(" dimmed", "");
         } else {
           document.getElementById("dimmer").className += " dimmed";
