@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" id="modal--booking-complete">
+  <div class="modal modal--booking-complete">
     <div class="modal__container modal__container--main">
       <header class="modal__header">
           <font-awesome-icon class="modal__img modal__img--icon" icon="check-circle"/>
@@ -33,7 +33,6 @@
 
   .modal {
     z-index: 100000;
-    display: inline;
     background-color: #f2f2f2;
     position: fixed;
     bottom: 0;
